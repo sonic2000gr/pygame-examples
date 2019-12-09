@@ -2,6 +2,7 @@
 # Bouncing ball - OOP :)
 #
 
+import pgzrun
 from random import randint
 
 class Ball(Actor):
@@ -44,10 +45,6 @@ for i in range(0,8):
     yspeed = randint(-50,50)
   balls.append(Ball('soccer-ball', x, y, xspeed, yspeed))
 
-WIDTH = 640
-HEIGHT = 480
-TITLE = "Bouncing Ball OOP"
-
 def draw():
     screen.fill((50,80,250))
     for theball in balls:
@@ -56,4 +53,8 @@ def draw():
 def update(dt):
     for theball in balls:
         theball.Move(dt)
-    
+
+WIDTH = 640
+HEIGHT = 480
+TITLE = "Bouncing Ball OOP"
+pgzrun.go()

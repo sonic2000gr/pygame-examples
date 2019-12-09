@@ -1,7 +1,5 @@
 from random import randint
-
-WIDTH = 660
-HEIGHT = 480
+import pgzrun
 
 def draw():
     pass
@@ -14,3 +12,6 @@ def update():
         random_color = (randint(0,255), randint(0,255), randint(0,255))
         screen.draw.filled_rect(the_pos, random_color)
 
+WIDTH = 660
+HEIGHT = 480
+pgzrun.go()

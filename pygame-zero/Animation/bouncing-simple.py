@@ -1,10 +1,4 @@
-WIDTH = 640
-HEIGHT = 480
-TITLE = "Bouncing Ball"
-x, y = 100.0, 100.0
-xspeed, yspeed = 100.0, 100.0
-theball = Actor("soccer-ball", anchor=('left', 'top'))
-theball.pos = x, y
+import pgzrun
 
 def draw():
     screen.fill((50,80,250))
@@ -28,3 +22,12 @@ def update(dt):
         y = 0
         yspeed = -yspeed
     theball.pos = x, y
+
+WIDTH = 640
+HEIGHT = 480
+TITLE = "Bouncing Ball"
+x, y = 100.0, 100.0
+xspeed, yspeed = 100.0, 100.0
+theball = Actor("soccer-ball", anchor=('left', 'top'))
+theball.pos = x, y
+pgzrun.go()

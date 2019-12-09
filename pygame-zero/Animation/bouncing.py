@@ -1,14 +1,4 @@
-WIDTH = 640
-HEIGHT = 480
-TITLE = "Bouncing Ball"
-x, y = 100.0, 100.0
-x2, y2 = 50.0, 50.0
-xspeed, yspeed = 150.0, 120.0
-xspeed2, yspeed2 = -120.0, 150.0
-theball = Actor("soccer-ball", anchor=('left', 'top'))
-theball2 = Actor("soccer-ball", anchor=('left', 'top'))
-theball.pos = x, y
-theball2.pos = x2, y2
+import pgzrun
 
 def draw():
     screen.fill((50,80,250))
@@ -47,6 +37,18 @@ def update(dt):
     if y2 > HEIGHT - theball2.height:
         y2 = HEIGHT - theball2.height
         yspeed2 = -yspeed2
-    
     theball.pos = x, y
     theball2.pos = x2, y2
+
+WIDTH = 640
+HEIGHT = 480
+TITLE = "Bouncing Ball"
+x, y = 100.0, 100.0
+x2, y2 = 50.0, 50.0
+xspeed, yspeed = 150.0, 120.0
+xspeed2, yspeed2 = -120.0, 150.0
+theball = Actor("soccer-ball", anchor=('left', 'top'))
+theball2 = Actor("soccer-ball", anchor=('left', 'top'))
+theball.pos = x, y
+theball2.pos = x2, y2
+pgzrun.go()

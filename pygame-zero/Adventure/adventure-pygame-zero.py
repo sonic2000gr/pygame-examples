@@ -1,3 +1,5 @@
+import pgzrun
+
 class Colorbars(object):
     def __init__(self):
         self.colorlist = [(253,53,8), (23,233,9), (0,0,0), (202,228,7), (1,191,0),
@@ -159,3 +161,4 @@ HEIGHT = 240
 nodelay = True
 bars = Colorbars()
 thegame = Game()
+pgzrun.go()

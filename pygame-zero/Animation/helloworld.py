@@ -1,6 +1,4 @@
-WIDTH = 320
-HEIGHT = 140
-TITLE = "Hello Pygame"
+import pgzrun
 
 def draw():
     screen.fill((50,80,250))
@@ -9,3 +7,8 @@ def draw():
                      fontsize = 48,
                      color="red",
                      background="yellow")
+
+WIDTH = 320
+HEIGHT = 140
+TITLE = "Hello Pygame"
+pgzrun.go()
